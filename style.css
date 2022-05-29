@@ -4,30 +4,31 @@
   color: #333;
   font-family: Lato, sans-serif;
 }
-header {
+.logo {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-header img {
+.logo img {
   width: 100%;
 }
-header .more-info {
+.logo .more-info {
   font-family: fantasy, cursive;
 }
 @media (max-width:768px) {
-  header { 
+  .logo { 
     text-align: center;
   }
 }
 
-main {
+.todo-list {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
-.task {
+.todo-list__task,
+.todo-list__label-task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -43,10 +44,10 @@ li {
   list-style: none;
 }
 input,
-button {
+.todo-list__button {
   outline: none;
 }
-main button {
+.todo-list .todo-list__button {
   background: none;
   border: 0px;
   color: #888;
@@ -55,7 +56,7 @@ main button {
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-main button:hover {
+.todo-list .todo-list__button:hover {
   color: #3a3a3a;
 }
 /* Heading */
@@ -68,7 +69,7 @@ main button:hover {
   margin: 0;
   text-transform: uppercase;
 }
-main input[type="text"] {
+.todo-list input[type="text"] {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -80,12 +81,12 @@ main input[type="text"] {
   font-family: Lato, sans-serif;
   color: #888;
 }
-main input[type="text"]:focus {
+.todo-list input[type="text"]:focus {
   color: #333;
 }
 
 /* New Task */
-main label[for="new-task"] {
+.todo-list label[for="new-task"] {
   display: block;
   margin: 0 0 20px;
 }
@@ -94,7 +95,7 @@ main label[for="new-task"] {
 }
 
 /* Task list */
-main li {
+.todo-list li {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -103,28 +104,28 @@ main li {
   justify-content: space-between;
   align-items: center;
 }
-main li > * {
+.todo-list li > * {
   vertical-align: middle;
 }
 
-main li > input[type="checkbox"] {
+.todo-list li > input[type="checkbox"] {
   margin: 0 10px;
 }
-main li > label {
+.todo-list li > label {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
-main li >  input[type="text"] {
+.todo-list li >  input[type="text"] {
   width: 226px;
 }
-.delete img {
+.todo-list__button_delete img {
   height: 2em;
   transform: rotateZ(45deg);
   transition: transform 200ms ease-in;
 }
-.delete img:hover {
+.todo-list__button_delete img:hover {
   transform: rotateZ(0);
 }
 
@@ -135,15 +136,15 @@ main li >  input[type="text"] {
 }
 
 /* Edit Task */
-main ul li input[type=text] {
+.todo-list ul li input[type=text] {
   display: none;
 }
 
-main .edit-mode input[type=text] {
+.todo-list .edit-mode input[type=text] {
   display: inline-block;
   width: 224px;
 }
 
-main .edit-mode label {
+.todo-list .edit-mode label {
   display: none;
 }
