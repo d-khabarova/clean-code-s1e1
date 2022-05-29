@@ -16,12 +16,12 @@
 .header .more-info {
   font-family: fantasy, cursive;
 }
-
 @media (max-width:768px) {
   .header { 
     text-align: center;
   }
 }
+
 .main {
   display: block;
   width: 500px;
@@ -36,14 +36,14 @@
   display: flex;
 }
 ul {
-  margin:0;
+  margin: 0;
   padding: 0px;
 }
 li {
-  list-style:none;
+  list-style: none;
 }
-input,button{
-  outline:none;
+input,button {
+  outline: none;
 }
 .main button {
   background: none;
@@ -135,14 +135,14 @@ input,button{
 
 /* Edit Task */
 .main ul li input[type=text] {
-  display:none
+  display: none
 }
 
 .main .edit-mode input[type=text] {
-  display:inline-block;
-  width:224px
+  display: inline-block;
+  width: 224px
 }
 
 .main .edit-mode label {
-  display:none;
+  display: none;
 }
